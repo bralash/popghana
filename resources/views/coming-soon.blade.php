@@ -49,7 +49,8 @@
 
                     <form
                     id="subscribe-form" class="vertical-form   compressed-form"
-                    action="php/operation.php" method="post">
+                    action="/send" method="post">
+                    {{csrf_field()}}
                       <input type="email" name="email-address" class="input-email round mr10" placeholder="Email Address">
                       <button type="submit" name="subscribe" class="submit btn-solid round input-submit"><i class="ion-android-send"></i></button>
 

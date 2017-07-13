@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => 'info.popmoneymatrix.com',
+        'secret' => 'key-f75046b1ec50ded8bec34bd6086f6826',
     ],
 
     'ses' => [
