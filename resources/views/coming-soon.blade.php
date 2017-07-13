@@ -78,7 +78,7 @@
 
         <div id="rightSide" class="visible img-only">
           <div class="background-img-holder">
-            <img src="img/pexels-photo-213117.jpg" alt="This is my work">
+            <img src="img/bg.png" alt="This is my work">
           </div>
 
         </div>
