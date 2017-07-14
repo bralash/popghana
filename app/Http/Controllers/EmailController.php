@@ -19,11 +19,12 @@ class EmailController extends Controller
     }
 
     public function contact(Request $request) {
+    	$userMessage = request()->input('message');
+    	Mail::raw($userMessage, function($message) {
     		$from = request()->input('email-address');
     		$name = request()->input('username');
     		$subject = request()->input('subject');
-    		$userMessage = request()->input('message');
-    	Mail::raw($userMessage, function($message) {
+
      		$message->from($from, $name);
     		$message->subject($subject);
     		$message->to('info@popmoneymatrix.com')->cc('emmanuelasaber@gmail.com');
