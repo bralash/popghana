@@ -1,0 +1,35 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #2747d8;
+}
+
+section.wrapper {
+	width: 80%;
+	height: 200px;
+	max-width: 500px;
+	margin: auto;
+	background: #243ca8;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,.2);
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+
+section.wrapper h2 {
+	margin-bottom: 8px;
+}
+
+section.wrapper p {
+	margin-top: 8px;
+}
+
+section.wrapper a {
+	color: #fff;
+}

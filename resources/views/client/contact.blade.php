@@ -28,7 +28,8 @@
 
                                 <i class="pe-7s-headphones"></i>
                                 <h4>Call us at</h4>
-                                <a href="#" class="contact-detail">(+233) 209-342-626</a>
+                                <a href="#" class="contact-detail">(+233) 50 498 4357</a>
+                                <a href="#" class="contact-detail">(+233) 50 491 9550</a>
                             
                             </div><!-- //icon box -->
 
@@ -41,6 +42,7 @@
                                 <i class="pe-7s-mail"></i>
                                 <h4>Email Us at</h4>
                                 <a href="#" class="contact-detail">info@popmoneymatrix.com</a>
+                                <a href="#" class="contact-detail">support@popmoneymatrix.com</a>
                             
                             </div><!-- //icon box -->
 
@@ -52,7 +54,7 @@
 
                                 <i class="pe-7s-map-marker"></i>
                                 <h4>Visit Us at</h4>
-                                <a href="#" class="contact-detail">Swedru, Ghana</a>
+                                <a href="#" class="contact-detail">North Industrial Area, <br>Accra</a>
                             
                             </div><!-- //icon box -->
 
@@ -72,7 +74,7 @@
                         
                         <h5 class="section-title col-xs-12">Shoot Us a Message</h5>
 
-                        <form action="/contact-form" method="post" class="col-md-6">
+                        <form action="/contact-form" method="post" class="col-md-6" enctype="multipart/form-data">
 
                         	{{ csrf_field() }}
 

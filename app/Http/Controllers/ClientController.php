@@ -21,4 +21,8 @@ class ClientController extends Controller
     public function contact() {
     	return view('client.contact');
     }
+
+    public function signup() {
+    	return View('client.signup');
+    }
 }

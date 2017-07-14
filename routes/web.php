@@ -17,8 +17,10 @@ Route::group(['middleware' =>['web']], function() {
 	// Emails
 	Route::post('send', ['uses' => 'EmailController@comingSoon']);
 	Route::post('/contact-form', ['uses' => 'EmailController@contact']);
+	Route::get('/email-confirm', ['uses' => 'EmailController@confirm']);
 
 
 	Route::get('/home', ['uses' => 'ClientController@home']);
 	Route::get('/contact', ['uses' => 'ClientController@contact']);
+	Route::get('signup', ['uses' => 'ClientController@signup']);
 });

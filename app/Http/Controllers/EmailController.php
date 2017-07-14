@@ -15,20 +15,24 @@ class EmailController extends Controller
     		$message->subject('New Subscription');
     		$message->from($from, 'Subscription Form');
     		$message->to('info@popmoneymatrix.com');
+
+    		return redirect('email-confirm');
     	});
     }
 
     public function contact(Request $request) {
     	$userMessage = request()->input('message');
     	Mail::raw($userMessage, function($message) {
+    		$subject = request()->input('subject');
     		$from = request()->input('email-address');
     		$name = request()->input('username');
-    		$subject = request()->input('subject');
-
-     		$message->from($from, $name);
-    		$message->subject($subject);
-    		$message->to('info@popmoneymatrix.com')->cc('emmanuelasaber@gmail.com');
+    		$message->from($from, $name);
+    		$message->to('info@popmoneymatrix.com', 'POP Money Matrix')->subject($subject);
     	});
+    }
+
+    public function confirm() {
+    	return View('email.confirm');
     }
 
 }
