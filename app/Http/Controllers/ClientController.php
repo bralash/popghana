@@ -12,13 +12,13 @@ class ClientController extends Controller
     	return View('coming-soon');
     }
 
-    public function sendMail(Request $request) {
-    	
-    	Mail::raw('New Subscription', function($message) {
-    		$from = request()->input('email-address');
-    		$message->subject('New Subscription');
-    		$message->from($from);
-    		$message->to('info@popmoneymatrix.com');
-    	});
+    
+
+    public function home() {
+    	return View('client.index');
+    }
+
+    public function contact() {
+    	return view('client.contact');
     }
 }

@@ -13,12 +13,12 @@
 
 Route::group(['middleware' =>['web']], function() {
 	Route::get('', ['uses' => 'ClientController@index']);
-	Route::post('send', ['uses' => 'ClientController@sendMail']);
 
-	Route::get('send', function(){
-		Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
-		{
-			$message->to('info@popmoneymatrix.com');
-		});
-	});
+	// Emails
+	Route::post('send', ['uses' => 'EmailController@comingSoon']);
+	Route::post('/contact-form', ['uses' => 'EmailController@contact']);
+
+
+	Route::get('/home', ['uses' => 'ClientController@home']);
+	Route::get('/contact', ['uses' => 'ClientController@contact']);
 });
