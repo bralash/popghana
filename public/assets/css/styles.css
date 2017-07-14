@@ -438,7 +438,7 @@ Icon Boxes
 
 /*icon box 2*/
 .icon-box-2 {
-    padding: 40px;
+    padding: 40px 17px;
     border: 1px solid #eaeaea;
 }
 
@@ -462,7 +462,7 @@ Icon Boxes
     text-align: center;
     display: block;
     color: #6d9f00;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .icon-box-2 p {
