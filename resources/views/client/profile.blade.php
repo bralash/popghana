@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-    <title>Thanks for reaching out</title>
+    <title>Investable | A Versatile Corporate, Business and Banking Template</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -39,8 +39,8 @@
 
                         <div class="absolute-center">
 
-                            <h1 class="big-text">Yaaaay!!</h1>
-                            <p>Thanks for taking the time to reach out. We will get back to you</p>
+                            <h1 class="big-text">Profile</h1>
+                            <p>I'm still working on the profile page. Will be done shortly.</p>
                             <a href="/home" class="button button-primary button-md">Back Home</a>
 
                         </div>
@@ -185,5 +185,4 @@
 
 </body>
 
-<!-- Mirrored from oneclickpixels.com/investable/page-404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Nov 2016 03:11:56 GMT -->
 </html>

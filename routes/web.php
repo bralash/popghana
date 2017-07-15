@@ -26,7 +26,9 @@ Route::group(['middleware' =>['web']], function() {
 	Route::post('login', ['uses' => 'ClientController@login']);
 	Route::get('logout', ['uses' => 'ClientController@logout']);
 
-	Route::get('profile', ['uses' => 'ClientController@profile']);
+	Route::group(['middleware' => ['auth']], function() {
+		Route::get('profile', ['uses' => 'ClientController@profile']);
+	});
 	Route::get('/home', ['uses' => 'ClientController@home']);
 	Route::get('/contact', ['uses' => 'ClientController@contact']);
 });

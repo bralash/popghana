@@ -85,7 +85,7 @@ class ClientController extends Controller
 
     public function login(Request $request) {
     	$userData = array(
-    		'email' => $request->input('email'),
+    		'contact' => $request->input('contact'),
     		'password' => $request->input('password')
     	);
 
@@ -103,7 +103,7 @@ class ClientController extends Controller
     }
 
     public function profile() {
-    	return 'Profile';
+    	return View('client.profile');
     }
 }
 
