@@ -103,7 +103,9 @@ class ClientController extends Controller
     }
 
     public function profile() {
-    	return View('client.profile');
+    	$user = User::all();
+
+    	return View('client.profile', compact('user'));
     }
 }
 

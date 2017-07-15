@@ -40,7 +40,9 @@
                         <div class="absolute-center">
 
                             <h1 class="big-text">Profile</h1>
-                            <p>I'm still working on the profile page. Will be done shortly.</p>
+                            <p>Your code is <b>{{{ Auth::user()->user_code }}}</b> <br>
+                                Still working on the rest. Work resumes on Monday.
+                            </p>
                             <a href="/home" class="button button-primary button-md">Back Home</a>
 
                         </div>
