@@ -29,10 +29,25 @@ class EmailController extends Controller
     		$message->from($from, $name);
     		$message->to('info@popmoneymatrix.com', 'POP Money Matrix')->subject($subject);
     	});
+
+        return redirect('email-confirm');
     }
 
     public function confirm() {
     	return View('email.confirm');
+    }
+
+    public static function send_registration_mail($email,$name, $userCode) {
+        $userMessage = "Thanks for the registering. Use".$userCode." as your username";
+        $data = array('email' => $email, 'name' => $name);
+        Mail::raw($userMessage, function($message) use ($data) {
+            var_dump($data);
+            $subject = "Thanks for registering";
+            $from = 'info@popmoneymatrix.com';
+            $name = 'POP Money Matrix';
+            $message->from('info@popmoneymatrix.com','POP Money Matrix');
+            $message->to($data['email'], $data['name'])->subject($subject);
+        });
     }
 
 }

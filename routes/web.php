@@ -19,8 +19,14 @@ Route::group(['middleware' =>['web']], function() {
 	Route::post('/contact-form', ['uses' => 'EmailController@contact']);
 	Route::get('/email-confirm', ['uses' => 'EmailController@confirm']);
 
+	// Register and Login
+	Route::get('signup', ['uses' => 'ClientController@signup']);
+	Route::post('signup', ['uses' => 'ClientController@register']);
+	Route::get('signin', ['uses' => 'ClientController@signin']);
+	Route::post('login', ['uses' => 'ClientController@login']);
+	Route::get('logout', ['uses' => 'ClientController@logout']);
 
+	Route::get('profile', ['uses' => 'ClientController@profile']);
 	Route::get('/home', ['uses' => 'ClientController@home']);
 	Route::get('/contact', ['uses' => 'ClientController@contact']);
-	Route::get('signup', ['uses' => 'ClientController@signup']);
 });

@@ -60,11 +60,26 @@
                             <li><a href="#" class="menu-item">Facebook</a></li>
 
                             <!-- Menu Item -->
-                            <li><a href="#" class="menu-item">Twitter</a></li>
-
-                            <li>
-                                <a href="/signup" class="button button-sm button-primary">Sign Up</a>
-                            </li>
+                            
+                            
+                            
+                            @if(Auth::check())
+                                <li>
+                                    <a href="/signup" class="button button-sm button-primary">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="/logout" class="menu-item" style="color: #EC644B;">Logout</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="/signin" class="menu-item">Sign In</a>
+                                <li>
+                                    
+                                </li>
+                                    <a href="/signup" class="button button-sm button-primary">Sign Up</a>
+                                </li>
+                            @endif
+                            
 
                         </ul>
 
