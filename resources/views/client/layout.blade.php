@@ -6,6 +6,7 @@
 <head>
     <title>@yield('title') | POP Money Matrix</title>
     <meta charset="utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="" />
@@ -137,7 +138,7 @@
 
                             <a href="index-2.html" class="logo mb20">
                                 <i class="pe-7s-cash"></i>
-                                <p>Investable</p>
+                                <p>POP Mobile Money</p>
                             </a>
                             <p class="mb10">Nullam pellentesque mauris et lorem congue varius. Morbi iaculis diam leo, ut tempus tellus laoreet porttitor.</p>
                             <ul class="list-sm">
@@ -222,7 +223,7 @@
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/all.js"></script>
-
+    <script src="assets/js/script.js"></script>
 
 </body>
 

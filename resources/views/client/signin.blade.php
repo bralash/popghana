@@ -30,8 +30,8 @@
                     	@endif
 
                         <div class="field">
-                            <label>Contact</label>
-                            <input type="text" name="contact" required="required">   
+                            <label>Username</label>
+                            <input type="text" name="username" required="required">   
                         </div>
                         <div class="field">
                             <label>Password</label>

@@ -48,7 +48,8 @@ class ClientController extends Controller
     }
 
     public function signup() {
-    	return View('client.signup');
+        $users = User::all();
+    	return View('client.signup', compact('users'));
     }
 
     public function register(Request $request) {
@@ -56,21 +57,31 @@ class ClientController extends Controller
     	$user_code = self::userCode();
     	if($request->input('password') == $request->input('cpass')) {
     		try {
-    			$email = $request->input('email');
-    			$username = $request->input('name');
-	    		$user->name = $username;
+	    		$user->surname = $request->input('surname');
+                $user->other_names = $request->input('other_names');
 		    	$user->contact = $request->input('contact');
-		    	$user->email = $email;
+		    	$user->email = $request->input('email');
+                $user->username = $request->input('username');
+                $user->address = $request->input('address');
 		    	$user->password = Hash::make($request->input('cpass'));
 		    	$user->user_code = $user_code;
+                $user->next_of_kin = $request->input('next_of_kin');
+                $user->nok_contact = $request->input('nok_contact');
+                $user->payment_method = $request->input('payment_method');
+                $user->mm_number = $request->input('mm_number');
+                $user->mm_name = $request->input('mm_name');
+                $user->acc_name = $request->input('acc_name');
+                $user->acc_number = $request->input('acc_number');
+                $user->bank_name = $request->input('bank_name');
+                $user->upliner_name = $request->input('upliner_name');
 		    	$user->save();
 
 		    	// EmailController::send_registration_mail($email,$username, $user_code);
-		    	return redirect('home');
+		    	return redirect('signin');
     		} catch(QueryException $e) {
     			$error_code = $e->errorInfo[1];
     			if($error_code == 1062) {
-    				return redirect('signup')->with('error','Email already exists');
+    				return redirect('signup')->with('error','Username already exists');
     			}
     		}
     	} else {
@@ -85,7 +96,7 @@ class ClientController extends Controller
 
     public function login(Request $request) {
     	$userData = array(
-    		'contact' => $request->input('contact'),
+    		'username' => $request->input('username'),
     		'password' => $request->input('password')
     	);
 
