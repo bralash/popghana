@@ -12,6 +12,9 @@
     <meta name="description" content="" />
     <meta name="author" content="Emmanuel Asaber" /> 
     <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="assets/css/alertify.css">
+    <link rel="stylesheet" href="assets/css/themes/default.css">
+    <link rel="stylesheet" href="assets/css/themes/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!--[if IE]><script src="assets/js/excanvas.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -66,7 +69,7 @@
                             
                             @if(Auth::check())
                                 <li>
-                                    <a href="/signup" class="button button-sm button-primary">Profile</a>
+                                    <a href="/profile" class="button button-sm button-primary">Profile</a>
                                 </li>
                                 <li>
                                     <a href="/logout" class="menu-item" style="color: #EC644B;">Logout</a>
@@ -180,8 +183,8 @@
 
                             <h6>Subscribe</h6>
                             <p>Sign up for all the latest news, daily stock picks, and investment advice from our team of pros.</p>
-                            <form action="http://oneclickpixels.com/investable/index.html" method="post" class="newsletter">
-                                <input type="email" name="newsletter" placeholder="Enter Your Email">
+                            <form action="/send" method="post" class="newsletter">
+                                <input type="email" name="email-address" placeholder="Enter Your Email">
                                 <button><i class="fa fa-paper-plane"></i></button>
                             </form>
 
@@ -216,6 +219,7 @@
 
     <!-- Plugins -->
     <script src="assets/js/jquery-3.0.0.min.js"></script>
+    <script src="assets/js/alertify.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/prettify.js"></script>
@@ -225,6 +229,7 @@
     <script src="assets/js/all.js"></script>
     <script src="assets/js/script.js"></script>
 
+    @yield('script')
 </body>
 
 <!-- Mirrored from oneclickpixels.com/investable/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Nov 2016 03:11:34 GMT -->

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Illuminate\Support\Facades\Input as input;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Mail;
@@ -114,9 +115,24 @@ class ClientController extends Controller
     }
 
     public function profile() {
-    	$user = User::all();
+    	$user = Auth::user();
 
     	return View('client.profile', compact('user'));
+    }
+
+    public function changePassword(Request $request) {
+        $user = User::find(Auth::user()->id);
+        if(Input::get('password') == Input::get('cpass')) {
+            if(Hash::check(Input::get('current_password'), $user['password'])) {
+                $user->password = bcrypt(Input::get('password'));
+                $user->save();
+                return back()->with('password_changed', 'Password Changed');
+            } else {
+                return back()->with('current_password', 'Current password does not match. Try again');
+            }
+        } else {
+            return back()->with('new_password', 'New passwords do not match. Try again');
+        }
     }
 }
 

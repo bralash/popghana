@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->string('acc_number')->nullable();
             $table->string('bank_name')->nullable();
             $table->string('upliner_name')->nullable();
+            $table->integer('status')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

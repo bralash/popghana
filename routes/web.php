@@ -28,6 +28,7 @@ Route::group(['middleware' =>['web']], function() {
 
 	Route::group(['middleware' => ['auth']], function() {
 		Route::get('profile', ['uses' => 'ClientController@profile']);
+		Route::post('change-password', ['uses' => 'ClientController@changePassword']);
 	});
 	Route::get('/home', ['uses' => 'ClientController@home']);
 	Route::get('/contact', ['uses' => 'ClientController@contact']);
