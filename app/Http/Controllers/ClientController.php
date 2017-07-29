@@ -116,8 +116,8 @@ class ClientController extends Controller
 
     public function profile() {
     	$user = Auth::user();
-
-    	return View('client.profile', compact('user'));
+        $users = User::all();
+    	return View('client.profile', compact('user', 'users'));
     }
 
     public function changePassword(Request $request) {

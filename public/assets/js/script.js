@@ -1,18 +1,43 @@
-jQuery(document).ready(function($) {
-	$mm = $('#mm'),
-	$ba = $('#ba'),
-	$cash = $('#cash');
-	$mm.on('click', function() {
-		$('div.ba').removeClass('show');
-		$('div.mm').addClass('show');
+$(document).ready(function($) {
+	var mm = $('#mm'),ba = $('#ba'),cash = $('#cash');
+	
+	var bankDetails = $('div.ba'),
+		mmDetails = $('div.mm');
+
+	function checkRadioSelect($radio,$remove,$add) {
+		$remove.removeClass('show');
+		$add.addClass('show');
+	}
+
+	function removeAll($remove, $add) {
+		$remove.removeClass('show');
+		$add.removeClass('show');
+	}
+
+	if(mm.attr('checked','checked')) {
+		checkRadioSelect($(this), bankDetails, mmDetails);
+	} else if(ba.attr('checked','checked')) {
+		checkRadioSelect($(this), mmDetails, bankDetails);
+	} else {
+		removeAll(bankDetails, mmDetails);
+	}
+
+
+	mm.on('change', function(e) {
+		checkRadioSelect($(this), bankDetails, mmDetails);
 	});
 
-	$ba.on('click', function() {
-		$('div.mm').removeClass('show');
-		$('div.ba').addClass('show');
+	ba.on('change', function(e) {
+		checkRadioSelect($(this), mmDetails, bankDetails);
 	});
 
-	$cash.on('click', function() {
-		$('div.options').removeClass('show');
+	cash.on('change', function(e) {
+		removeAll(bankDetails, mmDetails);
 	});
+
+	cash.on('change', function(e) {
+		removeAll(bankDetails, mmDetails);
+	});
+
+
 });

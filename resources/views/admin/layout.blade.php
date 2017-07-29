@@ -55,15 +55,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/users">
-                        <i class="entypo-users"></i>
-                        <p>Users</p>
+                    <a href="/profile">
+                        <i class="entypo-user"></i>
+                        <p>Profile</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/" target="_blank">
-                        <i class="entypo-home"></i>
-                        <p>Back to site</p>
+                    <a href="/admin/users">
+                        <i class="entypo-users"></i>
+                        <p>Users</p>
                     </a>
                 </li>
             </ul>

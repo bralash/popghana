@@ -202,14 +202,7 @@
 
                         <div class="col-xs-12 sub-footer">
                             <p>Copyright &copy; 2016 OneClickPixels. All rights reserved.  <a href="https://icons8.com/" target="_blank">Icon pack by Icons8</a></p>
-                            <ul class="list-cc">
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/visa-48.html" title="Visa" alt="credit"></li>
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/discover-48.html" title="Visa" alt="credit"></li>
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/paypal-48.html" title="Visa" alt="credit"></li>
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/am_ex-48.html" title="Visa" alt="credit"></li>
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/google_wallet-48.html" title="Visa" alt="credit"></li>
-                                <li><img src="../../maxcdn.icons8.com/Color/PNG/48/Finance/bitcoin-48.html" title="Visa" alt="credit"></li>
-                            </ul>
+                            
                         </div>
 
                     </div><!-- //row -->
