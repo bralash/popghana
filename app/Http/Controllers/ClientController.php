@@ -134,5 +134,10 @@ class ClientController extends Controller
             return back()->with('new_password', 'New passwords do not match. Try again');
         }
     }
+
+    Public function updateProfile(Request $request) {
+        User::where('id', $request->input('id'))->update($request->except(['_token']));
+        return redirect('profile');
+    }
 }
 

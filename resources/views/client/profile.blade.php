@@ -51,6 +51,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="id" value="{{$user->id}}">
                                     <div class="field">
                                         <label>Surname</label>
                                         <input type="text" name="surname" value="{{$user->surname}}">
