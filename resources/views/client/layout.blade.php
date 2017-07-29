@@ -68,12 +68,22 @@
                             
                             
                             @if(Auth::check())
-                                <li>
-                                    <a href="/profile" class="button button-sm button-primary">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="/logout" class="menu-item" style="color: #EC644B;">Logout</a>
-                                </li>
+                                @if(Auth::user()->status == 3)
+                                    <li>
+                                        <a href="/admin" class="button button-sm button-primary">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout" class="menu-item" style="color: #EC644B;">Logout</a>
+                                    </li>
+                                @else
+                                    <li>
+                                        <a href="/profile" class="button button-sm button-primary">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout" class="menu-item" style="color: #EC644B;">Logout</a>
+                                    </li>
+                                @endif
+                                
                             @else
                                 <li>
                                     <a href="/signin" class="menu-item">Sign In</a>

@@ -21,7 +21,7 @@
                 <div class="login-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
                     <h3>Log In</h3>
                     <form action="/login" method="post" class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                    	{{ csrf_field() }}
+                    	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						
 						@if(session()->has('error'))
 							<div class="alert alert-danger" role="alert">

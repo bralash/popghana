@@ -11,8 +11,10 @@
                 <p>
                     @if($user->status == 0)
                         Your account is <span class="label label-warning">inactive</span>
-                    @else
+                    @elseif($user->status == 1)
                         Your account is <span class="label label-success">active</span>
+                    @elseif($user->status == 3)
+                        You have been granted administrative privileges
                     @endif
                 </p>
             </div><!-- //row -->
