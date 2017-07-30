@@ -11,7 +11,7 @@ class AdminController extends Controller
     public function dashboard() {
     	$user = Auth::user();
     	
-        if($user->status !== 3) {
+        if($user->status != 3) {
     		return redirect('/profile');
     	}
     	return View('admin.index');
