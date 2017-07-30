@@ -50,7 +50,9 @@
 
                                 <div class="field">
                                     <label>Username</label>
-                                    <input type="text" name="username" required="required">   
+                                    <input type="text" name="username" required="required"
+                                    pattern="^[a-zA-Z0-9_.-]*$"
+                                    title="Usernames cannot contain spaces and other specia characters">
                                 </div>
 
                                 <div class="field">
