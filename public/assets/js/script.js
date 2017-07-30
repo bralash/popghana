@@ -4,40 +4,54 @@ $(document).ready(function($) {
 	var bankDetails = $('div.ba'),
 		mmDetails = $('div.mm');
 
-	function checkRadioSelect($radio,$remove,$add) {
-		$remove.removeClass('show');
-		$add.addClass('show');
+	var checkPaymentMethod = $('span.check').text();
+	console.log(checkPaymentMethod);
+	if(checkPaymentMethod == 'Mobile Money') {
+		mm.attr('checked', true);
+		ba.attr('checked', false);
+		cash.attr('checked', false);
+	} else if(checkPaymentMethod == 'Bank Account') {
+		ba.attr('checked', 'checked');
+	} else if(checkPaymentMethod == 'Cash') {
+		cash.attr('checked', 'checked');
 	}
 
-	function removeAll($remove, $add) {
-		$remove.removeClass('show');
-		$add.removeClass('show');
+	function checkRadioSelect(remove,add) {
+		remove.removeClass('show');
+		add.addClass('show');
 	}
 
-	if(mm.attr('checked','checked')) {
-		checkRadioSelect($(this), bankDetails, mmDetails);
-	} else if(ba.attr('checked','checked')) {
-		checkRadioSelect($(this), mmDetails, bankDetails);
-	} else {
+	function removeAll(remove, add) {
+		remove.removeClass('show');
+		add.removeClass('show');
+	}
+
+	if(mm.attr('checked') == 'checked') {
+		checkRadioSelect(bankDetails, mmDetails);
+	}
+
+	if(ba.attr('checked') == 'checked') {
+		checkRadioSelect(mmDetails, bankDetails);
+	}
+
+	if(cash.attr('checked') == 'checked') {
 		removeAll(bankDetails, mmDetails);
 	}
 
 
 	mm.on('change', function(e) {
-		checkRadioSelect($(this), bankDetails, mmDetails);
+		checkRadioSelect(bankDetails, mmDetails);
 	});
 
 	ba.on('change', function(e) {
-		checkRadioSelect($(this), mmDetails, bankDetails);
+		checkRadioSelect(mmDetails, bankDetails);
 	});
 
 	cash.on('change', function(e) {
 		removeAll(bankDetails, mmDetails);
 	});
 
-	cash.on('change', function(e) {
-		removeAll(bankDetails, mmDetails);
-	});
+	
 
 
 });

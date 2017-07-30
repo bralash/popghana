@@ -30,7 +30,7 @@
                     <li role="presentation" class="active"><a href="#details" aria-controls="home" role="tab" data-toggle="tab">Profile Details</a></li>
                     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Edit Profile</a></li>
                     <li role="presentation"><a href="#password" aria-controls="messages" role="tab" data-toggle="tab">Change Password</a></li>
-                    <li role="presentation"><a href="#deactivate" aria-controls="settings" role="tab" data-toggle="tab">Deactivate Account</a></li>
+                    {{-- <li role="presentation"><a href="#deactivate" aria-controls="settings" role="tab" data-toggle="tab">Deactivate Account</a></li> --}}
                   </ul>
 
                   <!-- Tab panes -->
@@ -69,31 +69,12 @@
 
                                     <div class="field">
                                         <label>Mode of payment</label>
-                                        @if($user->payment_method == 'Mobile Money')
-                                            <input type="radio" name="payment_method" value="Mobile Money" style="width: 30px;" id="mm" checked="checked"> Mobile Money
-                                            <input type="radio" name="payment_method" value="Bank Account" style="width: 30px;" id="ba">
-                                            Bank Account
-                                            <input type="radio" name="payment_method" value="Cash" style="width: 30px;" id="cash">
-                                            Cash
-                                        @elseif($user->payment_method == 'Bank Account')
-                                            <input type="radio" name="payment_method" value="Mobile Money" style="width: 30px;" id="mm"> Mobile Money
-                                            <input type="radio" name="payment_method" value="Bank Account" style="width: 30px;" id="ba" checked="checked">
-                                            Bank Account
-                                            <input type="radio" name="payment_method" value="Cash" style="width: 30px;" id="cash">
-                                            Cash
-                                        @elseif($user->payment_method == 'Cash')
-                                            <input type="radio" name="payment_method" value="Mobile Money" style="width: 30px;" id="mm"> Mobile Money
-                                            <input type="radio" name="payment_method" value="Bank Account" style="width: 30px;" id="ba">
-                                            Bank Account
-                                            <input type="radio" name="payment_method" value="Cash" style="width: 30px;" id="cash" checked="checked">
-                                            Cash
-                                        @else
-                                            <input type="radio" name="payment_method" value="Mobile Money" style="width: 30px;" id="mm"> Mobile Money
-                                            <input type="radio" name="payment_method" value="Bank Account" style="width: 30px;" id="ba">
-                                            Bank Account
-                                            <input type="radio" name="payment_method" value="Cash" style="width: 30px;" id="cash">
-                                            Cash
-                                        @endif
+                                        <span class="check" style="display: none;">{{$user->payment_method}}</span>
+                                        <input type="radio" name="payment_method" value="Mobile Money" style="width: 30px;" id="mm"> Mobile Money
+
+                                        <input type="radio" name="payment_method" value="Bank Account" style="width: 30px;" id="ba"> Bank Account
+
+                                        <input type="radio" name="payment_method" value="Cash" style="width: 30px;" id="cash"> Cash
                                     </div>
 
                                     <div class="mm options">
