@@ -25,4 +25,15 @@ class AdminController extends Controller
     	}
     	return View('admin.users',compact('users'));
     }
+
+    public function validateUser() {
+        return View('admin.validate');
+    }
+
+    public function getUserById($code) {
+        $user = User::where('user_code', $code)
+        ->orWhere('user_code', 'like', '%' . $code. '%')->get();
+
+        return $user;
+    }
 }

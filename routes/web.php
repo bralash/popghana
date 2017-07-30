@@ -13,6 +13,8 @@
 
 Route::group(['middleware' =>['web']], function() {
 	Route::get('', ['uses' => 'ClientController@index']);
+	Route::get('json', ['uses' => 'AdminController@testJSON']);
+	Route::get('user/{code}', ['uses' => 'AdminController@getUserById']);
 
 	// Emails
 	Route::post('send', ['uses' => 'EmailController@comingSoon']);
@@ -34,6 +36,7 @@ Route::group(['middleware' =>['web']], function() {
 		Route::group(['prefix' => 'admin'], function() {
 			Route::get('/', ['uses' => 'AdminController@dashboard']);
 			Route::get('users', ['uses' => 'AdminController@users']);
+			Route::get('validate-user', ['uses' => 'AdminController@validateUser']);
 		});
 	});
 	Route::get('/home', ['uses' => 'ClientController@home']);

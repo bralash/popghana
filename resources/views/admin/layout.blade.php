@@ -66,6 +66,12 @@
                         <p>Users</p>
                     </a>
                 </li>
+                <li>
+                    <a href="/admin/validate-user">
+                        <i class="entypo-check"></i>
+                        <p>Validate User</p>
+                    </a>
+                </li>
             </ul>
 
         </div>
