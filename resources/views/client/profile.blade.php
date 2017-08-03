@@ -44,11 +44,15 @@
                                     transaction. This helps us track your transactions.
                                 </p>
                                 <br>
-                                <h5 class="section-title">You currently {{ $uplinerCount }} downliners</h5>
+                                <h5 class="section-title">You currently have {{ $uplinerCount }} downliners</h5>
                                 <p>
                                     Your downliners are people you've registered, and the people they've
-                                    registered. 
+                                    registered. To increase your downliners, let people regiseter with this link: <br>
+                                    <code>
+                                        https://popmoneymatrix.com/signup/{{$ref}}
+                                    </code>
                                 </p>
+
                            </div>
                        </div>
                     </div>

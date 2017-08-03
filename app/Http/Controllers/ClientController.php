@@ -26,6 +26,18 @@ class ClientController extends Controller
 		return $prefix;
 	}
 
+    public function generateRef() {
+        $prefix = "";
+        $characters = array_merge(range('0','9'));
+        for($i = 0; $i < 8; $i++) {
+            $rand = mt_rand(0, count($characters)-1);
+            $prefix .= $characters[$rand];
+        }
+
+        return $prefix;
+
+    }
+
 	public static function userCode() {
 		$code = self::generateCode();
 		$user = User::where('user_code', '=', $code)->get();
@@ -56,6 +68,7 @@ class ClientController extends Controller
     public function register(Request $request) {
     	$user = new User();
     	$user_code = self::userCode();
+        $ref = self::generateRef();
     	if($request->input('password') == $request->input('cpass')) {
     		try {
 	    		$user->surname = $request->input('surname');
@@ -75,6 +88,7 @@ class ClientController extends Controller
                 $user->acc_number = $request->input('acc_number');
                 $user->bank_name = $request->input('bank_name');
                 $user->upliner_name = $request->input('upliner_name');
+                $user->ref = $ref;
 		    	$user->save();
 
 		    	// EmailController::send_registration_mail($email,$username, $user_code);
@@ -133,7 +147,8 @@ class ClientController extends Controller
     	$user = Auth::user();
         $users = User::all();
         $uplinerCount = self::checkUplinerCount(Auth::user()->username);
-    	return View('client.profile', compact('user', 'users', 'uplinerCount'));
+        $ref = self::generateRef();
+    	return View('client.profile', compact('user', 'users', 'uplinerCount', 'ref'));
     }
 
     public function changePassword(Request $request) {
