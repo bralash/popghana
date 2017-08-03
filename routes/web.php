@@ -23,6 +23,7 @@ Route::group(['middleware' =>['web']], function() {
 
 	// Register and Login
 	Route::get('signup', ['uses' => 'ClientController@signup']);
+	Route::get('signup/{id}', ['uses' => 'ClientController@refSignup']);
 	Route::post('signup', ['uses' => 'ClientController@register']);
 	Route::get('signin', ['uses' => 'ClientController@signin']);
 	Route::post('login', ['uses' => 'ClientController@login']);

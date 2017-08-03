@@ -49,7 +49,7 @@
                                     Your downliners are people you've registered, and the people they've
                                     registered. To increase your downliners, let people regiseter with this link: <br>
                                     <code>
-                                        https://popmoneymatrix.com/signup/{{$ref}}
+                                        http://popmoneymatrix.com/signup/{{$user->ref}}
                                     </code>
                                 </p>
 

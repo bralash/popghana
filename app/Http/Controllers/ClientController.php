@@ -65,6 +65,10 @@ class ClientController extends Controller
     	return View('client.signup', compact('users'));
     }
 
+    public function refSignup() {
+        return "Working on this feature. Come back tomorrow";
+    }
+
     public function register(Request $request) {
     	$user = new User();
     	$user_code = self::userCode();
