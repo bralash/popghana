@@ -43,6 +43,12 @@
                                     Enter this code as your reference whenever you make a mobile money
                                     transaction. This helps us track your transactions.
                                 </p>
+                                <br>
+                                <h5 class="section-title">You currently {{ $uplinerCount }} downliners</h5>
+                                <p>
+                                    Your downliners are people you've registered, and the people they've
+                                    registered. 
+                                </p>
                            </div>
                        </div>
                     </div>

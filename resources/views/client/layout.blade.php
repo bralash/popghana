@@ -39,9 +39,8 @@
 
                     <!-- Logo Container -->
                     <div class="logo-container">
-                        <a href="index-2.html" class="logo">
-                            <i class="pe-7s-cash"></i>
-                            <p>POP Money Matrix</p>
+                        <a href="/" class="logo">
+                            <img src="{{URL::asset('img/logo.png')}}">
                         </a>
                     </div>
 
@@ -149,17 +148,9 @@
                         
                         <div class="col-md-4 col-sm-12 col-xs-12 mb-sm-40">
 
-                            <a href="index-2.html" class="logo mb20">
-                                <i class="pe-7s-cash"></i>
-                                <p>POP Mobile Money</p>
+                            <a href="index-2.html" class="logo mb20 logo-bottom">
+                                <img src="{{URL::asset('img/logo.png')}}">
                             </a>
-                            <p class="mb10">Nullam pellentesque mauris et lorem congue varius. Morbi iaculis diam leo, ut tempus tellus laoreet porttitor.</p>
-                            <ul class="list-sm">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
 
                         </div>
 

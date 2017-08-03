@@ -114,10 +114,26 @@ class ClientController extends Controller
     	return redirect('home');
     }
 
+    public function checkUplinerCount($username) {
+        $upliners = User::where('upliner_name',$username)->get();
+        $uplinerCount = "";
+        if($upliners != null) {
+            $uplinerCount += sizeof($upliners);
+            foreach ($upliners as $upliner) {
+                $count = User::where('upliner_name',$upliner->username)->count();
+                $uplinerCount += $count;
+            }
+        } else {
+            $uplinerCount = 0;
+        }
+        return $uplinerCount;
+    }
+
     public function profile() {
     	$user = Auth::user();
         $users = User::all();
-    	return View('client.profile', compact('user', 'users'));
+        $uplinerCount = self::checkUplinerCount(Auth::user()->username);
+    	return View('client.profile', compact('user', 'users', 'uplinerCount'));
     }
 
     public function changePassword(Request $request) {

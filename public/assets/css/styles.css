@@ -941,7 +941,12 @@ Logo
 }
 
 .logo-container img {
-    height: 18px;
+    /*height: 18px;*/
+    width: 110px;
+}
+
+.logo-bottom img {
+    width: 320px;
 }
 
 .logo {
