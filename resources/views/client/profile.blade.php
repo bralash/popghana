@@ -116,10 +116,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="field">
+                                    {{-- <div class="field">
                                         <label>Username of Upliner</label>
                                         <input type="text" name="upliner_name" list="upliner" value="{{$user->upliner_name}}">
-                                    </div>
+                                    </div> --}}
 
                                     <datalist id="upliner">
                                         @foreach($users as $user)

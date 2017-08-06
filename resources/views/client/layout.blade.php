@@ -12,10 +12,10 @@
     <meta name="description" content="" />
     <meta name="author" content="Emmanuel Asaber" /> 
     <link rel="shortcut icon" href="favicon.ico"> 
-    <link rel="stylesheet" href="assets/css/alertify.css">
-    <link rel="stylesheet" href="assets/css/themes/default.css">
-    <link rel="stylesheet" href="assets/css/themes/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="{{URL::asset('assets/css/alertify.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/themes/default.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/themes/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/styles.css')}}" />
     <!--[if IE]><script src="assets/js/excanvas.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -192,7 +192,7 @@
                         </div>
 
                         <div class="col-xs-12 sub-footer">
-                            <p>Copyright &copy; 2016 OneClickPixels. All rights reserved.  <a href="https://icons8.com/" target="_blank">Icon pack by Icons8</a></p>
+                            <p>Copyright &copy; 2017 POP Money Matrix. All rights reserved. Designed by<a href="http://easaber.com" target="_blank">easaber</a></p>
                             
                         </div>
 
@@ -212,19 +212,17 @@
 
 
     <!-- Plugins -->
-    <script src="assets/js/jquery-3.0.0.min.js"></script>
-    <script src="assets/js/alertify.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/prettify.js"></script>
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/all.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="{{URL::asset('assets/js/jquery-3.0.0.min.js')}}"></script>
+    <script src="{{URL::asset('assets/js/alertify.min.js')}}"></script>
+    <script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{URL::asset('assets/js/modernizr.custom.js')}}"></script>
+    <script src="{{URL::asset('assets/js/prettify.js')}}"></script>
+    <script src="{{URL::asset('assets/js/classie.js')}}"></script>
+    <script src="{{URL::asset('assets/js/jquery.slicknav.js')}}"></script>
+    <script src="{{URL::asset('assets/js/slick.min.js')}}"></script>
+    <script src="{{URL::asset('assets/js/all.js')}}"></script>
+    <script src="{{URL::asset('assets/js/script.js')}}"></script>
 
     @yield('script')
 </body>
-
-<!-- Mirrored from oneclickpixels.com/investable/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 10 Nov 2016 03:11:34 GMT -->
 </html>

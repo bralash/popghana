@@ -11,8 +11,9 @@
 						<h4 class="title">Validate User</h4>
 						<div class="row">
 							<div class="col-md-6">
-								<form action="/validate-user" method="post">
+								<form action="user-validate" method="post">
 									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<input type="hidden" name="username" id="txtUsername" value="">
 									<div class="field">
 										<label>User Code</label>
 										<input type="text" id="code" name="user_code" class="form-control" required>

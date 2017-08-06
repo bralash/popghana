@@ -38,6 +38,7 @@ Route::group(['middleware' =>['web']], function() {
 			Route::get('/', ['uses' => 'AdminController@dashboard']);
 			Route::get('users', ['uses' => 'AdminController@users']);
 			Route::get('validate-user', ['uses' => 'AdminController@validateUser']);
+			Route::post('user-validate', ['uses' => 'AdminController@userValidate']);
 		});
 	});
 	Route::get('/home', ['uses' => 'ClientController@home']);

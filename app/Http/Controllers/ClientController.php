@@ -65,8 +65,13 @@ class ClientController extends Controller
     	return View('client.signup', compact('users'));
     }
 
-    public function refSignup() {
-        return "Working on this feature. Come back tomorrow";
+    public function refSignup($id) {
+        $user = User::where('ref', $id)->first();
+        if($user != null) {
+            return View('client.refsignup', compact('user'));
+        } else {
+            return redirect("signup");
+        }
     }
 
     public function register(Request $request) {

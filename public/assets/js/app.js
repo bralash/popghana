@@ -20,6 +20,7 @@ $(document).ready(function() {
 		    			$('h6#username b').html(data[i]['username']);
 		    			$('h6#fullname b').html(data[i]['surname'] + ', ' + data[i]['other_names']);
 		    			$('h6#contact b').html(data[i]['contact']);
+		    			$('input#txtUsername').val(data[i]['username']);
 		    		}
 		    	}
 		    });

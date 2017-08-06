@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\Transaction;
 
 class AdminController extends Controller
 {
@@ -20,7 +21,7 @@ class AdminController extends Controller
     public function users() {
     	$users = User::all();
     	$user = Auth::user();
-    	if($user->status !== '3') {
+    	if($user->status != '3') {
     		return redirect('/profile');
     	}
     	return View('admin.users',compact('users'));
@@ -28,6 +29,20 @@ class AdminController extends Controller
 
     public function validateUser() {
         return View('admin.validate');
+    }
+
+    public function userValidate(Request $request) {
+        $trans = new Transaction();
+        $username = $request->input('username');
+        $user = User::where('username', $username)->first();
+        if($user != null) {
+            $trans->username = $username;
+            $trans->amount = $request->input('amount');
+            $user->status = 1;
+            $trans->save();
+            $user->save();
+            return redirect("admin/users");
+        }
     }
 
     public function getUserById($code) {
