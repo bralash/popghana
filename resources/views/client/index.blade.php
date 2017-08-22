@@ -12,9 +12,11 @@
 
                             <div class="bg-img bg-img-1 color-overlay">
                                 <div class="hero-center col-md-8 col-sm-10 col-xs-12">
-                                    <span>Welcome to investable</span>
-                                    <h1>We Fund Dreams</h1>
-                                    <p>Click the button below to find out how investable can help you become more financially secure and better prepared for retirement.</p>
+                                    <span>Welcome to POP Money Matrix</span>
+                                    <h1>Our Vision</h1>
+                                    <p>
+                                        To eliminate poverty and empower our generation financially through true and fair means
+                                    </p>
                                     <a href="#" class="button button-primary button-md">Get started</a>
                                 </div>
                                 <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
@@ -22,9 +24,13 @@
 
                             <div class="bg-img bg-img-3 color-overlay">
                                 <div class="hero-center col-md-8 col-sm-10 col-xs-12">
-                                    <span>What we do</span>
-                                    <h1>Financially Empowering</h1>
-                                    <p>Click the button below to find out how investable can help you become more financially secure and better prepared for retirement.</p>
+                                    <span>Welcome to POP Money Matrix</span>
+                                    <h1>Our Mission</h1>
+                                    <p>
+                                        To financially empower members of the association through a member-to-member contribution system, using
+                                        an online, self-registration mode to create a large
+                                        number of members to benefit
+                                    </p>
                                     <a href="#" class="button button-primary button-md">Get started</a>
                                 </div>
                                  <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
@@ -42,3 +48,5 @@
                  
             </header>
 @stop
+
+@section('services')

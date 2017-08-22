@@ -40,7 +40,7 @@
                     <!-- Logo Container -->
                     <div class="logo-container">
                         <a href="/" class="logo">
-                            <img src="{{URL::asset('img/logo.png')}}">
+                            <img src="{{URL::asset('img/logo_alt.png')}}">
                         </a>
                     </div>
 
@@ -58,9 +58,6 @@
 
                             <!-- Menu Item -->
                             <li><a href="/contact" class="menu-item">Contact Us</a></li>
-
-                            <!-- Menu Item -->
-                            <li><a href="#" class="menu-item">Facebook</a></li>
 
                             <!-- Menu Item -->
                             
@@ -149,7 +146,7 @@
                         <div class="col-md-4 col-sm-12 col-xs-12 mb-sm-40">
 
                             <a href="index-2.html" class="logo mb20 logo-bottom">
-                                <img src="{{URL::asset('img/logo.png')}}">
+                                <img src="{{URL::asset('img/logo_alt.png')}}">
                             </a>
 
                         </div>
@@ -192,7 +189,7 @@
                         </div>
 
                         <div class="col-xs-12 sub-footer">
-                            <p>Copyright &copy; 2017 POP Money Matrix. All rights reserved. Designed by<a href="http://easaber.com" target="_blank">easaber</a></p>
+                            <p>Copyright &copy; 2017 POP Money Matrix. All rights reserved. Designed by<a href="http://easaber.com" target="_blank"> easaber</a></p>
                             
                         </div>
 
