@@ -49,4 +49,34 @@
             </header>
 @stop
 
-@section('services')
+@section('banner2')
+    <div class="bg-white pt80 pb80">
+        <div class="container">
+            <div class="table">
+                <div class="row">
+                    <div class="mb-sm-40 col-md-5 col-sm-12 col-xs-12 side">
+                       <h3 class="section-title  mb20">Who we are</h3>
+                       <p class="opacity-08">
+                           <b>POP Money Matrix</b> is a system designed by a social
+                           group called <b>PRINCE OF PEACE (POP) ASSOCIATION.</b>
+                           This system seeks to empower members financially, by
+                           way of giving out registration fees paid by new members 
+                           to existing members, to support their entrepreneurial
+                           ideas, pay off debts and empower members to face life.
+                       </p>
+                       <p>
+                           Most associations look at generating funds for the group
+                           itself and other than the members and only come to aid of
+                           members only when they are in trouble or bereaved.
+                       </p>
+                    </div>
+
+                    <div class="col-md-6 col-md-push-1 col-sm-12 col-xs-12 content">
+                        <img src="assets/images/services/img-4.jpg" class="w100" alt="image">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+@stop

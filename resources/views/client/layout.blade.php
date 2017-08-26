@@ -145,7 +145,7 @@
                         
                         <div class="col-md-4 col-sm-12 col-xs-12 mb-sm-40">
 
-                            <a href="index-2.html" class="logo mb20 logo-bottom">
+                            <a href="/" class="logo mb20 logo-bottom">
                                 <img src="{{URL::asset('img/logo_alt.png')}}">
                             </a>
 
