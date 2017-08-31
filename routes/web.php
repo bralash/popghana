@@ -12,7 +12,7 @@
 */
 
 Route::group(['middleware' =>['web']], function() {
-	Route::get('', ['uses' => 'ClientController@index']);
+	// Route::get('', ['uses' => 'ClientController@index']);
 	Route::get('json', ['uses' => 'AdminController@testJSON']);
 	Route::get('user/{code}', ['uses' => 'AdminController@getUserById']);
 
@@ -41,7 +41,7 @@ Route::group(['middleware' =>['web']], function() {
 			Route::post('user-validate', ['uses' => 'AdminController@userValidate']);
 		});
 	});
-	Route::get('/home', ['uses' => 'ClientController@home']);
+	Route::get('', ['uses' => 'ClientController@home']);
 	Route::get('/contact', ['uses' => 'ClientController@contact']);
 
 

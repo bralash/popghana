@@ -51,8 +51,4 @@ $(document).ready(function($) {
 		removeAll(bankDetails, mmDetails);
 	});
 
-
-	
-
-
 });

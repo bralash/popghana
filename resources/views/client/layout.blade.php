@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="" />
     <meta name="author" content="Emmanuel Asaber" /> 
-    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="{{URL::asset('img/logo.png')}}"> 
     <link rel="stylesheet" href="{{URL::asset('assets/css/alertify.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/default.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/bootstrap.min.css')}}">
@@ -51,13 +51,13 @@
                         <ul id="menu" class="menu">
 
                             <!-- Menu Item -->
-                            <li><a href="/home" class="menu-item">Home</a></li>
+                            <li><a href="#home" class="menu-item">Home</a></li>
 
                             <!-- Menu Item -->
-                            <li><a href="/about" class="menu-item">About Us</a></li>
+                            <li><a href="#about" class="menu-item">Who we are</a></li>
 
                             <!-- Menu Item -->
-                            <li><a href="/contact" class="menu-item">Contact Us</a></li>
+                            <li><a href="#how-it-works" class="menu-item">How it works</a></li>
 
                             <!-- Menu Item -->
                             
@@ -218,6 +218,7 @@
     <script src="{{URL::asset('assets/js/jquery.slicknav.js')}}"></script>
     <script src="{{URL::asset('assets/js/slick.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/all.js')}}"></script>
+    <script src="{{URL::asset('assets/js/scrolling.js')}}"></script>
     <script src="{{URL::asset('assets/js/script.js')}}"></script>
 
     @yield('script')
