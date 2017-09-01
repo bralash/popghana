@@ -13,6 +13,7 @@
     <meta name="author" content="Emmanuel Asaber" /> 
     <link rel="shortcut icon" href="{{URL::asset('img/logo.png')}}"> 
     <link rel="stylesheet" href="{{URL::asset('assets/css/alertify.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/ionicons.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/default.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/styles.css')}}" />
@@ -156,26 +157,27 @@
                             <h6>Information</h6>
 
                             <ul class="list-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Process</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#how-it-works">Our Process</a></li>
+                                <li><a href="signin">Sign In</a></li>
+                                <li><a href="/signup">Sign Up</a></li>
                             </ul>
                             
                         </div>
 
-                        <div class="col-md-2 col-sm-6 col-xs-12 mb-sm-40">
+                        <!-- <div class="col-md-2 col-sm-6 col-xs-12 mb-sm-40">
 
-                            <h6>Support</h6>
+                            <h6>Contacts</h6>
 
                             <ul class="list-links">
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Prospectus</a></li>
-                                <li><a href="#">Investor Relations</a></li>
+                                <li>0504919550</li>
+                                <li>0557775597(Mobile Money)</li>
+                                <li>0504984357</li>
+                                <li>info@popmoneymatrix.com</li>
                             </ul>
                             
-                        </div>
+                        </div> -->
 
                         <div class="col-md-4 col-sm-12 col-xs-12 mb-sm-40">
 

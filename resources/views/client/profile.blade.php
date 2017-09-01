@@ -1,5 +1,5 @@
 @extends('client.layout')
-@section('title', 'Emmanuel Asaber')
+@section('title', 'Profile')
 @section('color', 'colored-menu')
 
 @section('hero')

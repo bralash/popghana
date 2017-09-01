@@ -17,6 +17,7 @@
 
     <!--  Material Dashboard CSS    -->
     <link href="{{URL::asset('assets/css/amaze.css')}}" rel="stylesheet" >
+    <link href="{{URL::asset('css/ionicons.css')}}" rel="stylesheet" >
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{URL::asset('assets/css/demo.css')}}" rel="stylesheet" >
@@ -38,7 +39,7 @@
         -->
         <div class="logo">
             <a href="#" class="simple-text">
-                <img src="{{URL::asset('assets/img/logo-sidebar.png')}}">
+                <img src="{{URL::asset('img/logo_alt.png')}}" width="125px;">
             </a>
         </div>
         <div class="logo logo-mini">

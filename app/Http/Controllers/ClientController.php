@@ -61,6 +61,9 @@ class ClientController extends Controller
     }
 
     public function signup() {
+        if(Auth::check()) {
+            return redirect('/signin');
+        }
         $users = User::all();
     	return View('client.signup', compact('users'));
     }
@@ -134,14 +137,16 @@ class ClientController extends Controller
     public function logout(Request $request) {
     	Auth::logout();
     	Session::flush();
-    	return redirect('home');
+    	return redirect('/signin');
     }
 
     public function checkUplinerCount($username) {
         $upliners = User::where('upliner_name',$username)->get();
-        $uplinerCount = "";
+        // var_dump($upliners);
+        $uplinerCount = 0;
         if($upliners != null) {
-            $uplinerCount += sizeof($upliners);
+            // var_dump(count($upliners));
+            $uplinerCount += count($upliners);
             foreach ($upliners as $upliner) {
                 $count = User::where('upliner_name',$upliner->username)->count();
                 $uplinerCount += $count;

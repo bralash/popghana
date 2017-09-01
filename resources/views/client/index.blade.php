@@ -17,7 +17,7 @@
                                     <p>
                                         To eliminate poverty and empower our generation financially through true and fair means
                                     </p>
-                                    <a href="#" class="button button-primary button-md">Get started</a>
+                                    <a href="#about" class="button button-primary button-md">Get started</a>
                                 </div>
                                 <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
                             </div>
@@ -31,7 +31,20 @@
                                         an online, self-registration mode to create a large
                                         number of members to benefit
                                     </p>
-                                    <a href="#" class="button button-primary button-md">Get started</a>
+                                    <a href="#about" class="button button-primary button-md">Get started</a>
+                                </div>
+                                 <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
+                            </div>
+
+                            <div class="bg-img bg-img-3 color-overlay">
+                                <div class="hero-center col-md-8 col-sm-10 col-xs-12">
+                                    <span>Welcome to POP Money Matrix</span>
+                                    <h1>Our Aim</h1>
+                                    <p>
+                                        Enhancing the lives of members of the group rather
+                                        than that of the association
+                                    </p>
+                                    <a href="#about" class="button button-primary button-md">Get started</a>
                                 </div>
                                  <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
                             </div>
@@ -42,7 +55,7 @@
                     
                 </div><!-- //container -->
 
-                <a href="#services" class="mouse-box">
+                <a href="#about" class="mouse-box">
                     <div class="mouse"></div>
                 </a>
                  
@@ -111,10 +124,11 @@
                     <p>
                     One can join the scheme by registering and paying a subscription
                     fee of GH¢ 20.00/$5.00. After registration, you introduce 3 other
-                    people to join the scheme, where you become their upliner(<b>Note:</b> 
+                    people to join the scheme, where you become their upliner (<b>Note:</b> 
                     One person can sign on more than once, to create a better leverage).
                     Upon registration, a unique number will be generated, and that's 
-                    what would be used as the reference for all Mobile Money transfer.
+                    what would be used as the reference for all Mobile Money transactions
+                    (<b>0557775597</b>).
                     After the transfer, you can call to confirm the transaction and
                     if the transfer is not received after 24 hours, your account will be
                     deleted. After registering, this is how the generation or level is 
@@ -147,5 +161,69 @@
             </div>
         </div>
     </div>
+
+@stop
+@section('icon')
+
+    <div class="services pt100 pb100 bg-color-1">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="mb-sm-40 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                            <div class="icon-box-1">
+
+                                <i class="pe-7s-headphones color-white"></i>
+
+                                <h4 class="color-white">24/7 Customer Support</h4>
+
+                                <p class="color-white opacity-08">
+                                    <ul style="list-style: none; color: #fff;">
+                                        <li>0504919550</li>
+                                        <li>0557775597(Mobile Money)</li>
+                                        <li>0504984357</li>
+                                        <li>info@popmoneymatrix.com</li>
+                                    </ul>
+                                </p>
+
+                            </div>   
+                        </div><!-- // Service Block -->
+
+                        <div class="mb-sm-40 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                            <div class="icon-box-1">
+
+                                <i class="pe-7s-cash color-white"></i>
+
+                                <h4 class="color-white">Instant Payout</h4>
+
+                                <p class="color-white opacity-08">
+                                    Get paid instantly as you move through the grades.
+                                    No need to wait for a pay-day
+                                </p>
+
+                            </div>
+                        </div><!-- // Service Block -->
+
+                        <div class="mb-sm-40 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                            <div class="icon-box-1">
+
+                                <i class="pe-7s-id color-white"></i>
+
+                                <h4 class="color-white">Secure User Data</h4>
+
+                                <p class="color-white opacity-08">
+                                    Don't worry about your data getting out. It is secured
+                                    with us.
+                                </p>
+
+                            </div>
+                        </div><!-- // Service Block -->
+
+                    </div><!-- //row -->
+                    
+                </div><!-- //container -->
+                 
+            </div>
 
 @stop
