@@ -26,4 +26,26 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+
+    public function getDownliners() {
+
+        $downliners = User::where('upliner_name',$this->username)->get();
+        // $alldownliners = collect();
+        $alldownliners = $downliners;
+        // $alldownliners->merge($downliners);
+            // echo '<br>'.$this->username.'=';
+        foreach ($downliners as $d) {
+            # code...
+            // echo $d->username.'-'.$this->username.'|<br> ';
+            // $alldownliners->push($d);
+            // $alldownliners->merge($d->getDownliners());
+            foreach ($d->getDownliners() as $dd) {
+                $alldownliners->push($dd);
+            }
+        }
+
+        return $alldownliners;
+    }
 }

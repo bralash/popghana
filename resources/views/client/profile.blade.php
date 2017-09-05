@@ -52,7 +52,6 @@
                                         http://popmoneymatrix.com/signup/{{$user->ref}}
                                     </code>
                                 </p>
-
                            </div>
                        </div>
                     </div>

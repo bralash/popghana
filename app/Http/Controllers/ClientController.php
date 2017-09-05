@@ -141,28 +141,40 @@ class ClientController extends Controller
     }
 
     public function checkUplinerCount($username) {
-        $upliners = User::where('upliner_name',$username)->get();
-        // var_dump($upliners);
-        $uplinerCount = 0;
-        if($upliners != null) {
-            // var_dump(count($upliners));
-            $uplinerCount += count($upliners);
-            foreach ($upliners as $upliner) {
-                $count = User::where('upliner_name',$upliner->username)->count();
-                $uplinerCount += $count;
-            }
-        } else {
-            $uplinerCount = 0;
-        }
-        return $uplinerCount;
+        // $upliners = User::where('upliner_name',$username)->get();
+        // // var_dump($upliners);
+        // $uplinerCount = 0;
+        // if($upliners != null) {
+        //     // var_dump(count($upliners));
+        //     $uplinerCount += count($upliners);
+        //     foreach ($upliners as $upliner) {
+        //         $count = User::where('upliner_name',$upliner->username)->count();
+        //         $uplinerCount += $count;
+        //     }
+        // } else {
+        //     $uplinerCount = 0;
+        // }
+        // return $uplinerCount;
+
+
+        $user = User::where('username',$username)->first();
+        if($user)
+            return count($user->getDownliners());
+        else
+            return false;
+
     }
+
 
     public function profile() {
     	$user = Auth::user();
         $users = User::all();
-        $uplinerCount = self::checkUplinerCount(Auth::user()->username);
+        $us = Auth::user()->getDownliners();
+        $uplinerCount = count($us);
+        // echo "Count-".$uplinerCount;
+        // die($us);
         $ref = self::generateRef();
-    	return View('client.profile', compact('user', 'users', 'uplinerCount', 'ref'));
+    	return View('client.profile', compact('user', 'users', 'uplinerCount', 'ref','us'));
     }
 
     public function changePassword(Request $request) {
