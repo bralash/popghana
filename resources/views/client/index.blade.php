@@ -17,7 +17,7 @@
                                     <p>
                                         To eliminate poverty and empower our generation financially through true and fair means
                                     </p>
-                                    <a href="#about" class="button button-primary button-md">Get started</a>
+                                    <a href="/signin" class="button button-primary button-md">Get started</a>
                                 </div>
                                 <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
                             </div>
@@ -31,7 +31,7 @@
                                         an online, self-registration mode to create a large
                                         number of members to benefit
                                     </p>
-                                    <a href="#about" class="button button-primary button-md">Get started</a>
+                                    <a href="/signin" class="button button-primary button-md">Get started</a>
                                 </div>
                                  <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
                             </div>
@@ -44,7 +44,7 @@
                                         Enhancing the lives of members of the group rather
                                         than that of the association
                                     </p>
-                                    <a href="#about" class="button button-primary button-md">Get started</a>
+                                    <a href="/signin" class="button button-primary button-md">Get started</a>
                                 </div>
                                  <img src="assets/images/utility/bg-chart.png" class="chart" alt="chart">
                             </div>

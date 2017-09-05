@@ -11211,3 +11211,20 @@ a.cat-item {
 tbody td img {
   width: 60px;
 }
+
+
+
+.sidebar-wrapper .nav p {
+    color: #fff;
+}
+.sidebar-wrapper .nav .uk-button-text:before {
+  border-bottom-color: #fff;
+}
+
+span.profile.uk-button {
+  text-transform: lowercase;
+  color: #4183D7;
+}
+span.profile.uk-button:before {
+  border-bottom-color: #4183D7;
+}

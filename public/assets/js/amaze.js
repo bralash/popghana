@@ -25,6 +25,20 @@
 	}
 
 	$(document).ready(function(){
+
+		var modal = UIkit.modal("#profileModal");
+
+		$('span.profile').on('click', function() {
+			var data = $(this).closest('td'),
+			dataObj = {
+				name: data.attr('data-name')
+			},
+			modalObj = $('#profileModal');
+			// console.log(dataObj.name);
+			modalObj.find('.uk-modal-title').text(dataObj.name);
+			modal.show();
+		});
+
 		var window_width = $window.width();
 
 		if($body.hasClass('sidebar-mini')){
@@ -110,7 +124,7 @@
 
 				if(pdp.misc.sidebar_mini_active === true){
 					$body.removeClass('sidebar-mini');
-					$btn.html('<i class="entypo-left"></i>');
+					$btn.html('<i class="ion-chevron-left"></i>');
 					pdp.misc.sidebar_mini_active = false;
 
 					if(isWindows){
@@ -129,7 +143,7 @@
 
 					setTimeout(function(){
 						$body.addClass('sidebar-mini');
-						$btn.html('<i class="entypo-right"></i>');
+						$btn.html('<i class="ion-chevron-right"></i>');
 
 						$sidebar_collapse.css('height','auto');
 						pdp.misc.sidebar_mini_active = true;

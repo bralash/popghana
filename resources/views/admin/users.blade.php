@@ -18,13 +18,18 @@
 										<td>Contact</td>
 										<td>User Code</td>
 										<td>Account Status</td>
+										<td>Upliner</td>
 									</tr>
 								</thead>
 								<tbody>
 									@foreach($users as $key=>$user)
 										<tr>
 											<td>{{$user->surname . ', '. $user->other_names }}</td>
-											<td>{{ $user->username }}</td>
+											<td data-name="{{$user->surname . ', '. $user->other_names }}">
+												<span class="profile uk-button uk-button-text">
+												{{ $user->username }}
+												</span>
+											</td>
 											<td>{{ $user->contact }}</td>
 											<td>{{ $user->user_code }}</td>
 											@if($user->status == 0) 
@@ -34,11 +39,22 @@
 											@elseif($user->status == 3)
 												<td>Admin</td>
 											@endif
+											<td>{{$user->upliner_name}}</td>
 										</tr>
 									@endforeach
 								</tbody>
 							</table>
 						</div>
+						
+						<div id="profileModal" uk-modal>
+						    <div class="uk-modal-dialog uk-modal-body">
+						    	<button class="uk-modal-close-default" type="button" uk-close></button>
+						        <h2 class="uk-modal-title"></h2>
+						        <hr class="uk-divider-icon">
+						        
+						    </div>
+						</div>
+
 					</div>
 				</div>
 			</div>

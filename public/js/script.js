@@ -33,14 +33,14 @@ $( document ).ready(function() {
   "use strict";
 
 
-  $("#rightContent").mCustomScrollbar({
-      axis:"y",
-      theme:"minimal-dark",
-      scrollbarPosition: 'outside',
-      scrollInertia: 120,
-      setHeight: '100%',
-      setTop: 0,
-  });
+  // $("#rightContent").mCustomScrollbar({
+  //     axis:"y",
+  //     theme:"minimal-dark",
+  //     scrollbarPosition: 'outside',
+  //     scrollInertia: 120,
+  //     setHeight: '100%',
+  //     setTop: 0,
+  // });
 
   $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
   $(this).toggleClass('open');

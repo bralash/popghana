@@ -18,12 +18,14 @@
     <!--  Material Dashboard CSS    -->
     <link href="{{URL::asset('assets/css/amaze.css')}}" rel="stylesheet" >
     <link href="{{URL::asset('css/ionicons.css')}}" rel="stylesheet" >
+    <link rel="shortcut icon" href="{{URL::asset('img/logo.png')}}"> 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{URL::asset('assets/css/demo.css')}}" rel="stylesheet" >
 
     <!--     Fonts and icons     -->
     <link href="{{URL::asset('css/entypo/css/entypo.css')}}" rel="stylesheet">
+    <link href="{{URL::asset('css/uikit.css')}}" rel="stylesheet">
     <link href="{{URL::asset('assets/css/font-muli.css')}}" rel='stylesheet' type='text/css'>
     <link href="{{URL::asset('assets/css/themify-icons.css')}}" rel="stylesheet">
     <link href="{{URL::asset('assets/vendors/jquery-ui-1.12.0/jquery-ui.css')}}" rel="stylesheet">
@@ -44,33 +46,39 @@
         </div>
         <div class="logo logo-mini">
             <a href="#" class="simple-text">
-                P
+                <img src="{{URL::asset('img/logo_alt.png')}}" width="125px;">
             </a>
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li class="">
                     <a href="/admin">
-                        <i class="entypo-monitor"></i>
-                        <p>Dashboard</p>
+                        <i class="ion-stats-bars"></i>
+                        <p class="uk-button uk-button-text">Dashboard</p>
                     </a>
                 </li>
                 <li>
                     <a href="/profile">
-                        <i class="entypo-user"></i>
-                        <p>Profile</p>
+                        <i class="ion-tshirt-outline"></i>
+                        <p class="uk-button uk-button-text">Profile</p>
                     </a>
                 </li>
                 <li>
                     <a href="/admin/users">
-                        <i class="entypo-users"></i>
-                        <p>Users</p>
+                        <i class="ion-person-stalker"></i>
+                        <p class="uk-button uk-button-text">Users</p>
                     </a>
                 </li>
                 <li>
                     <a href="/admin/validate-user">
-                        <i class="entypo-check"></i>
-                        <p>Validate User</p>
+                        <i class="ion-key"></i>
+                        <p class="uk-button uk-button-text">Validate User</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/validate-user">
+                        <i class="ion-arrow-graph-up-left"></i>
+                        <p class="uk-button uk-button-text">Transactions</p>
                     </a>
                 </li>
             </ul>
@@ -82,7 +90,7 @@
             <div class="container-fluid">
                 <div class="navbar-minimize">
                     <button id="minimizeSidebar" class="btn btn-round btn-white btn-fill btn-just-icon">
-                        <i class="entypo-left"></i>
+                        <i class="ion-chevron-left"></i>
                     </button>
                 </div>
                 <div class="navbar-header">
@@ -190,6 +198,8 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAurmSUEQDwY86-wOG3kCp855tCI8lHL-I"></script>
 <!-- Select Plugin -->
 <script src="{{URL::asset('assets/vendors/jquery.select-bootstrap.js')}}"></script>
+<script src="{{URL::asset('js/uikit.js')}}"></script>
+<script src="{{URL::asset('js/uikit-icons.js')}}"></script>
 
 <!--  Checkbox, Radio, Switch and Tags Input Plugins -->
 <script src="{{URL::asset('assets/js/bootstrap-checkbox-radio-switch-tags.js')}}"></script>
