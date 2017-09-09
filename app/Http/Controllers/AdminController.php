@@ -18,6 +18,16 @@ class AdminController extends Controller
     	return View('admin.index');
     }
 
+    public function checkUplinerCount($username) {
+        $user = User::where('username',$username)->first();
+        if($user) {
+            return count($user->getDownliners());
+        }
+        else {
+            return false;
+        }
+    }
+
     public function users() {
     	$users = User::all();
     	$user = Auth::user();
@@ -51,4 +61,6 @@ class AdminController extends Controller
 
         return $user;
     }
+
+
 }

@@ -130,14 +130,15 @@
 
                                 <div class="field">
                                 	<label>Username of Upliner</label>
-                                	<input type="text" name="upliner_name" list="upliner">
+                                	{{-- <input type="text" name="upliner_name" list="upliner"> --}}
+                                    <select name="upliner_name" class="js-example-placeholder-multiple">
+                                        @foreach($users as $user)
+                                            <option value="{{$user->username}}">{{$user->username}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
-                                <datalist id="upliner">
-                                    @foreach($users as $user)
-                                        <option value="{{$user->username}}">
-                                    @endforeach
-                                </datalist>
+                                
 
                                 
 
@@ -160,3 +161,14 @@
 
 @stop
 
+@section('script')
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $(".js-example-placeholder-multiple").select2({
+              placeholder: "Select a state"
+            });
+        });
+    </script>
+
+@stop

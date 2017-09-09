@@ -141,28 +141,13 @@ class ClientController extends Controller
     }
 
     public function checkUplinerCount($username) {
-        // $upliners = User::where('upliner_name',$username)->get();
-        // // var_dump($upliners);
-        // $uplinerCount = 0;
-        // if($upliners != null) {
-        //     // var_dump(count($upliners));
-        //     $uplinerCount += count($upliners);
-        //     foreach ($upliners as $upliner) {
-        //         $count = User::where('upliner_name',$upliner->username)->count();
-        //         $uplinerCount += $count;
-        //     }
-        // } else {
-        //     $uplinerCount = 0;
-        // }
-        // return $uplinerCount;
-
-
         $user = User::where('username',$username)->first();
-        if($user)
+        if($user) {
             return count($user->getDownliners());
-        else
+        }
+        else {
             return false;
-
+        }
     }
 
 

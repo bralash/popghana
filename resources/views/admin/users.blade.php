@@ -17,29 +17,25 @@
 										<td>Username</td>
 										<td>Contact</td>
 										<td>User Code</td>
-										<td>Account Status</td>
-										<td>Upliner</td>
+										<td>Downline Count</td>
+										<td>Reg. Date</td>
 									</tr>
 								</thead>
 								<tbody>
 									@foreach($users as $key=>$user)
 										<tr>
 											<td>{{$user->surname . ', '. $user->other_names }}</td>
-											<td data-name="{{$user->surname . ', '. $user->other_names }}">
+											<td data-name="{{$user->surname . ', '. $user->other_names }}" data-email="{{$user->email}}" data-contact="{{$user->contact}}" data-address="{{$user->address}}" data-user-code="{{$user->user_code}}" data-nok="{{$user->next_of_kin}}" data-nkc="{{$user->nok_contact}}" data-payment="{{$user->payment_method}}" data-mm="{{$user->mm_number}}" data-mname="{{$user->mm_name}}" data-accname="{{$user->acc_name}}" data-accnum="{{$user->acc_number}}" data-bank="{{$user->bank_name}}" data-up="{{$user->upliner_name}}" data-status="{{$user->status}}" data-ref="{{$user->ref}}">
 												<span class="profile uk-button uk-button-text">
 												{{ $user->username }}
 												</span>
 											</td>
 											<td>{{ $user->contact }}</td>
 											<td>{{ $user->user_code }}</td>
-											@if($user->status == 0) 
-												<td>Inactive</td>
-											@elseif($user->status == 1)
-												<td>Active</td>
-											@elseif($user->status == 3)
-												<td>Admin</td>
-											@endif
-											<td>{{$user->upliner_name}}</td>
+											
+											{{-- <td>{{count($model->getDownliners($user->username))}}</td> --}}
+											<td>Working on it</td>
+											<td>{{$user->created_at}}</td>
 										</tr>
 									@endforeach
 								</tbody>
@@ -51,7 +47,27 @@
 						    	<button class="uk-modal-close-default" type="button" uk-close></button>
 						        <h2 class="uk-modal-title"></h2>
 						        <hr class="uk-divider-icon">
-						        
+						        <div class="row modelData">
+						        	<div class="col-md-6">
+						        		<b>Email: </b> <span class="usrEmail"></span> <br>
+						        		<b>Address:</b> <span class="usrAddress"></span> <br>
+						        		<b>User Code:</b> <span class="usrCode"></span> <br>
+						        		<b>Next of kin: </b> <span class="usrNok"></span> <br>
+						        		<b>Contact (Next of kin): </b> <span class="usrNkc"></span> <br>
+						        		<b>Payment Method: </b> <span class="usrPayment"></span> <br>
+						        		<b>MM Number: </b> <span class="usrMN"></span> <br>
+						        	</div>
+
+						        	<div class="col-md-6">
+						        		<b>MM Name: </b> <span class="usrMMN"></span> <br>
+						        		<b>Account Name: </b> <span class="usrAN"></span> <br>
+						        		<b>Account Number: </b> <span class="usrAcN"></span> <br>
+						        		<b>Bank Name: </b> <span class="usrBank"></span><br>
+						        		<b>Upliner: </b> <span class="usrUpliner"></span><br>
+						        		<b>Status: </b> <span class="usrStatus"></span> <br>
+						        		<b>Ref: </b> <span class="usrRef"></span>
+						        	</div>
+						        </div>
 						    </div>
 						</div>
 

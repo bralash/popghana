@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+	
 	var mm = $('#mm'),ba = $('#ba'),cash = $('#cash');
 	
 	var bankDetails = $('div.ba'),

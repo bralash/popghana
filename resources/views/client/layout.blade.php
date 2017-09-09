@@ -14,6 +14,9 @@
     <link rel="shortcut icon" href="{{URL::asset('img/logo.png')}}"> 
     <link rel="stylesheet" href="{{URL::asset('assets/css/alertify.css')}}">
     <link rel="stylesheet" href="{{URL::asset('css/ionicons.css')}}">
+    <script src="{{URL::asset('assets/js/jquery-3.0.0.min.js')}}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/default.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/themes/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/styles.css')}}" />
@@ -211,7 +214,7 @@
 
 
     <!-- Plugins -->
-    <script src="{{URL::asset('assets/js/jquery-3.0.0.min.js')}}"></script>
+    
     <script src="{{URL::asset('assets/js/alertify.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/bootstrap.min.js')}}"></script>
     <script src="{{URL::asset('assets/js/modernizr.custom.js')}}"></script>

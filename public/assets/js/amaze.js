@@ -26,16 +26,53 @@
 
 	$(document).ready(function(){
 
+
 		var modal = UIkit.modal("#profileModal");
 
 		$('span.profile').on('click', function() {
 			var data = $(this).closest('td'),
 			dataObj = {
-				name: data.attr('data-name')
+				name: data.attr('data-name'),
+				email: data.attr('data-email'),
+				contact: data.attr('data-contact'),
+				address: data.attr('data-address'),
+				user_code: data.attr('data-user-code'),
+				nok: data.attr('data-nok'),
+				nkc: data.attr('data-nkc'),
+				payment: data.attr('data-payment'),
+				mm_number: data.attr('data-mm'),
+				mm_name: data.attr('data-mname'),
+				acc_name: data.attr('data-accname'),
+				acc_num: data.attr('data-accnum'),
+				bank: data.attr('data-bank'),
+				upliner: data.attr('data-up'),
+				ref: data.attr('data-ref'),
+				status: data.attr('data-status')
 			},
-			modalObj = $('#profileModal');
-			// console.log(dataObj.name);
+			modalObj = $('#profileModal'),
+			modelData = $('.modelData');
 			modalObj.find('.uk-modal-title').text(dataObj.name);
+			modelData.find('.usrEmail').text(dataObj.email);
+			modelData.find('.usrAddress').text(dataObj.address);
+			modelData.find('.usrCode').text(dataObj.user_code);
+			modelData.find('.usrNok').text(dataObj.nok);
+			modelData.find('.usrNkc').text(dataObj.nkc);
+			modelData.find('.usrPayment').text(dataObj.payment);
+			modelData.find('.usrMN').text(dataObj.mm_number);
+			modelData.find('.usrMMN').text(dataObj.mm_name);
+			modelData.find('.usrAN').text(dataObj.acc_name);
+			modelData.find('.usrAcN').text(dataObj.acc_num);
+			modelData.find('.usrBank').text(dataObj.bank);
+			modelData.find('.usrUp').text(dataObj.upliner);
+			if(dataObj.status == 0) {
+				dataObj.status = 'Inactive';
+			} else if(dataObj.status == 1) {
+				dataObj.status = 'Active';
+			} else if(dataObj.status == 3) {
+				dataObj.status = 'Admin';
+			}
+			modelData.find('.usrStatus').text(dataObj.status);
+			modelData.find('.usrRef').text(dataObj.ref);
 			modal.show();
 		});
 
