@@ -11,11 +11,11 @@ class AdminController extends Controller
 {
     public function dashboard() {
     	$user = Auth::user();
-    	
+    	$users = User::all();
         if($user->status != 3) {
     		return redirect('/profile');
     	}
-    	return View('admin.index');
+    	return View('admin.index', compact('users'));
     }
 
     public function checkUplinerCount($username) {
@@ -35,6 +35,13 @@ class AdminController extends Controller
     		return redirect('/profile');
     	}
     	return View('admin.users',compact('users'));
+    }
+
+    public function usersJSON() {
+        $userCount = User::count();
+        return $userCount;
+
+        return \Response::json($userData);
     }
 
     public function validateUser() {

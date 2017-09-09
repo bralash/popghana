@@ -30,6 +30,7 @@
     <link href="{{URL::asset('assets/css/themify-icons.css')}}" rel="stylesheet">
     <link href="{{URL::asset('assets/vendors/jquery-ui-1.12.0/jquery-ui.css')}}" rel="stylesheet">
     <link href="{{URL::asset('assets/vendors/sweetalert/css/sweetalert2.min.css')}}" rel="Stylesheet" >
+    <link href="{{URL::asset('assets/css/admin.css')}}" rel="stylesheet" >
 </head>
 
 <body>
@@ -221,9 +222,7 @@
 <script src="{{URL::asset('assets/js/amaze.js')}}"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{URL::asset('assets/js/demo.js')}}"></script>
-
-<script src="{{URL::asset('assets/js/charts/flot-charts.js')}}"></script>
-<script src="{{URL::asset('assets/js/charts/chartjs-charts.js')}}"></script>
+{{-- <script src="https://www.gstatic.com/charts/loader.js"></script> --}}
 <script src="{{URL::asset('js/script.js')}}"></script>
 
 
@@ -235,7 +234,7 @@
 
     });
 </script>
-@yield('scripts')
+@yield('script')
 </body>
 
 <!-- Mirrored from www.urbanui.com/amaze/pages/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Apr 2017 03:30:47 GMT -->

@@ -13,7 +13,7 @@
 
 Route::group(['middleware' =>['web']], function() {
 	// Route::get('', ['uses' => 'ClientController@index']);
-	Route::get('json', ['uses' => 'AdminController@testJSON']);
+	Route::get('api/users', ['uses' => 'AdminController@usersJSON']);
 	Route::get('user/{code}', ['uses' => 'AdminController@getUserById']);
 
 	// Emails
