@@ -34,7 +34,7 @@
 											<td>{{ $user->user_code }}</td>
 											
 											{{-- <td>{{count($model->getDownliners($user->username))}}</td> --}}
-											<td>Working on it</td>
+											<td>{{count($user->getDownliners())}}</td>
 											<td>{{$user->created_at}}</td>
 										</tr>
 									@endforeach
