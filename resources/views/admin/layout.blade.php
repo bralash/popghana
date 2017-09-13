@@ -175,6 +175,7 @@
 <script src="{{URL::asset('assets/vendors/perfect-scrollbar.jquery.min.js')}}" type="text/javascript"></script>
 <!-- Forms Validations Plugin -->
 <script src="{{URL::asset('assets/vendors/jquery.validate.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/app.js')}}"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
 <script src="{{URL::asset('assets/vendors/moment.min.js')}}"></script>
 <!--  Charts Plugin -->
