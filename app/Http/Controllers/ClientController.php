@@ -28,7 +28,7 @@ class ClientController extends Controller
 
     public function generateRef() {
         $prefix = "";
-        $characters = array_merge(range('0','9'));
+        $characters = array_merge(range('1','9'));
         for($i = 0; $i < 8; $i++) {
             $rand = mt_rand(0, count($characters)-1);
             $prefix .= $characters[$rand];
