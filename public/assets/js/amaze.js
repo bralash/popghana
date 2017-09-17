@@ -64,6 +64,7 @@
 			modelData.find('.usrAcN').text(dataObj.acc_num);
 			modelData.find('.usrBank').text(dataObj.bank);
 			modelData.find('.usrUp').text(dataObj.upliner);
+			modelData.find('.usrUpliner').text(dataObj.upliner);
 			if(dataObj.status == 0) {
 				dataObj.status = 'Inactive';
 			} else if(dataObj.status == 1) {
