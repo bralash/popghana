@@ -74,7 +74,7 @@
                     <div class="mb-sm-40 col-md-5 col-sm-12 col-xs-12 side">
                        <p class="opacity-08">
                            <b>POP Money Matrix</b> is a system designed by a social
-                           group called <b>PRINCE OF PEACE (POP) ASSOCIATION.</b>
+                           group called <b>POP Money Foundation.</b>
                            This system seeks to empower members financially, by
                            way of giving out registration fees paid by new members 
                            to existing members, to support their entrepreneurial
