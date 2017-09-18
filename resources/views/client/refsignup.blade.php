@@ -130,16 +130,8 @@
 
                                 <div class="field">
                                 	<label>Username of Upliner</label>
-                                	<input type="text" name="upliner_name" list="upliner" value="{{$user->username}}" disabled>
+                                	<input type="text" name="upliner_name" value="{{$user->username}}" disabled>
                                 </div>
-
-                                {{-- <datalist id="upliner">
-                                    @foreach($users as $user)
-                                        <option value="{{$user->username}}">
-                                    @endforeach
-                                </datalist> --}}
-
-                                
 
                                 <div class="field">
                                     <button class="button button-md btn-block button-primary">Register</button>
