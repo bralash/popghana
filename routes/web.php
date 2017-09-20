@@ -34,6 +34,8 @@ Route::group(['middleware' =>['web']], function() {
 		Route::post('change-password', ['uses' => 'ClientController@changePassword']);
 		Route::post('update-profile', ['uses' => 'ClientController@updateProfile']);
 
+		Route::post('update-upliner', ['uses' => 'AdminController@updateupliner']);
+		
 		Route::group(['prefix' => 'admin'], function() {
 			Route::get('/', ['uses' => 'AdminController@dashboard']);
 			Route::get('users', ['uses' => 'AdminController@users']);

@@ -181,5 +181,7 @@ class ClientController extends Controller
         User::where('id', $request->input('id'))->update($request->except(['_token']));
         return redirect('profile');
     }
+
+    
 }
 

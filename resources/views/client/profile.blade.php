@@ -151,7 +151,7 @@
                                 </div>
                                 
                             </div>
-                            <button class="button button-md btn-block button-primary" style="max-width: 250px;">
+                            <button class="button button-md btn-block button-primary" style="max-height: none;width: 250px;">
                                 Update Profile
                             </button>
                         </form>

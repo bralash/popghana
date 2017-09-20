@@ -37,7 +37,10 @@
 											{{-- <td>{{count($model->getDownliners($user->username))}}</td> --}}
 											<td>{{count($user->getDownliners())}}</td>
 											<td>{{$user->created_at}}</td>
-											<td><a href="#">Edit</a> || <a href="#">Delete</a></td>
+											<td>
+												<a href="#" data-usrId="{{$user->id}}" class=" editUsr uk-button uk-button-text" uk-toggle="target: #editModal">Edit</a>
+												 || 
+												<a href="#" class="delUsr uk-button uk-button-text" uk-toggle="target: #deleteModal">Delete</a></td>
 										</tr>
 									@endforeach
 								</tbody>
@@ -71,6 +74,30 @@
 						        	</div>
 						        </div>
 						    </div>
+						</div>
+
+						<div id="editModal">
+							<div class="uk-modal-dialog uk-modal-body">
+								<button class="uk-modal-close-default" type="button" uk-close></button>
+								<h2 class="uk-modal-title">Edit Upliner</h2>
+								<hr class="uk-divider-icon">
+
+								<form action="/update-upliner" method="post">
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">
+									<input type="hidden" name="id" value="{{$user->id}}" id="usrid">
+									<div class="field">
+										<label for="">Upliner Name</label>
+										<select name="upliner_name" id="" class="uk-select">
+											@foreach($users as $user)
+												<option value="{{$user->username}}">{{$user->username}}</option>
+											@endforeach
+										</select>
+										<div class="uk-margin">
+											<button class="uk-button uk-button-primary">Update upliner</button>
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
 
 					</div>

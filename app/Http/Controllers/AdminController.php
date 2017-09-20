@@ -69,5 +69,10 @@ class AdminController extends Controller
         return $user;
     }
 
+    public function updateupliner(Request $request) {
+        User::where('id', $request->input('id'))->update($request->except(['_token']));
+        return redirect('/admin/users');
+    }
+
 
 }
