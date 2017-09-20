@@ -38,9 +38,9 @@
 											<td>{{count($user->getDownliners())}}</td>
 											<td>{{$user->created_at}}</td>
 											<td>
-												<a href="#" data-usrId="{{$user->id}}" class=" editUsr uk-button uk-button-text" uk-toggle="target: #editModal">Edit</a>
+												<a href="JavaScript:Void(0);" data-usrId="{{$user->id}}" class=" editUsr uk-button uk-button-text" uk-toggle="target: #editModal">Edit</a>
 												 || 
-												<a href="#" class="delUsr uk-button uk-button-text" uk-toggle="target: #deleteModal">Delete</a></td>
+												<a href="JavaScript:Void(0);" data-usrId="{{$user->id}}" data-name="{{$user->surname . ', '. $user->other_names }}" class="delUsr uk-button uk-button-text" uk-toggle="target: #deleteModal">Delete</a></td>
 										</tr>
 									@endforeach
 								</tbody>
@@ -97,6 +97,22 @@
 										</div>
 									</div>
 								</form>
+							</div>
+						</div>
+
+						<div id="deleteModal">
+							<div class="uk-modal-dialog uk-modal-body">
+								<button class="uk-modal-close-default" type="button" uk-close></button>
+								<h2 class="uk-modal-title">Delete User</h2>
+								<hr class="uk-divider-icon">
+
+								<div class="uk-modal-body">
+									Are you sure you want to delete <b id="usrName"></b>??
+								</div>
+								<div class="uk-modal-footer uk-text-right">
+						            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+						            <a href="" class="delUsrBtn uk-button uk-button-danger" type="button">Delete</a>
+						        </div>
 							</div>
 						</div>
 

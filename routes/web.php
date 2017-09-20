@@ -34,13 +34,15 @@ Route::group(['middleware' =>['web']], function() {
 		Route::post('change-password', ['uses' => 'ClientController@changePassword']);
 		Route::post('update-profile', ['uses' => 'ClientController@updateProfile']);
 
+
 		Route::post('update-upliner', ['uses' => 'AdminController@updateupliner']);
-		
+
 		Route::group(['prefix' => 'admin'], function() {
 			Route::get('/', ['uses' => 'AdminController@dashboard']);
 			Route::get('users', ['uses' => 'AdminController@users']);
 			Route::get('validate-user', ['uses' => 'AdminController@validateUser']);
 			Route::post('user-validate', ['uses' => 'AdminController@userValidate']);
+			Route::get('del-upliner/{id}', ['uses' => 'AdminController@deleteUpliner']);
 		});
 	});
 	Route::get('', ['uses' => 'ClientController@home']);

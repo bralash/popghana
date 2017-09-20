@@ -87,6 +87,14 @@
             editModal.show();
         });
 
+        $('.delUsr').on('click', function() {
+            var usrid = $(this).attr('data-usrId'),
+                username = $(this).attr('data-name');
+            $('#usrName').text(username);
+            $('.delUsrBtn').attr('href', 'del-upliner/' + usrid);
+            deleteModal.show();
+        });
+
         var window_width = $window.width();
 
         if ($body.hasClass('sidebar-mini')) {
