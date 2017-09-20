@@ -130,8 +130,9 @@
 
                                 <div class="field">
                                 	<label>Username of Upliner</label>
-                                	<input type="text" name="upliner_name" value="{{$user->username}}" disabled>
+                                	<input type="text" name="" value="{{$user->username}}" disabled>
                                 </div>
+                                <input type="hidden" name="upliner_name" value="{{$user->username}}">
 
                                 <div class="field">
                                     <button class="button button-md btn-block button-primary">Register</button>
