@@ -19,6 +19,7 @@
 										<td>User Code</td>
 										<td>Downline Count</td>
 										<td>Reg. Date</td>
+										<td>Actions</td>
 									</tr>
 								</thead>
 								<tbody>
@@ -36,6 +37,7 @@
 											{{-- <td>{{count($model->getDownliners($user->username))}}</td> --}}
 											<td>{{count($user->getDownliners())}}</td>
 											<td>{{$user->created_at}}</td>
+											<td><a href="#">Edit</a> || <a href="#">Delete</a></td>
 										</tr>
 									@endforeach
 								</tbody>

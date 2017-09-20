@@ -126,12 +126,6 @@
                                         @endforeach
                                     </datalist>
 
-                                    <div class="field">
-                                        <button class="button button-md btn-block button-primary">
-                                            Update Profile
-                                        </button>
-                                    </div>
-
                                 </div>
 
                                 <div class="col-md-5">
@@ -155,7 +149,11 @@
                                         <input type="text" name="nok_contact" value="{{$user->nok_contact}}">   
                                     </div>
                                 </div>
+                                
                             </div>
+                            <button class="button button-md btn-block button-primary" style="max-width: 250px;">
+                                Update Profile
+                            </button>
                         </form>
                             
 
