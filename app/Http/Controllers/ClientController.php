@@ -64,7 +64,7 @@ class ClientController extends Controller
         if(Auth::check()) {
             return redirect('/signin');
         }
-        $users = User::all();
+        $users = User::where('status', '!=', 0)->get();
     	return View('client.signup', compact('users'));
     }
 
