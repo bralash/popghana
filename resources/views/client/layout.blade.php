@@ -185,7 +185,9 @@
                         <div class="col-md-4 col-sm-12 col-xs-12 mb-sm-40">
 
                             <h6>Subscribe</h6>
-                            <p>Sign up for all the latest news, daily stock picks, and investment advice from our team of pros.</p>
+                            <p>
+                                Sign up for all the latest news and updates from POP Moneny Foundation
+                            </p>
                             <form action="/send" method="post" class="newsletter">
                                 <input type="email" name="email-address" placeholder="Enter Your Email">
                                 <button><i class="fa fa-paper-plane"></i></button>
