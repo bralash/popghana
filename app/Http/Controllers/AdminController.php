@@ -29,7 +29,7 @@ class AdminController extends Controller
     }
 
     public function users() {
-    	$users = User::all();
+    	$users = User::orderBy('created_at','desc')->get();
     	$user = Auth::user();
     	if($user->status != '3') {
     		return redirect('/profile');
