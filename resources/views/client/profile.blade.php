@@ -50,7 +50,7 @@
                                     registered. To increase your downliners, let people regiseter with this link: <br>
                                     @if($user->status == 0)
                                         <code>
-                                            Your code is unavailable because your account isn't active.
+                                            Your link is unavailable because your account isn't active.
                                         </code>
                                     @else
                                         <code>
