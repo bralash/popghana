@@ -38,7 +38,7 @@
                     <div role="tabpanel" class="tab-pane active" id="details">
                        <div class="row">
                            <div class="col-md-5">
-                                <h5 class="section-title">Your transaction ID is <u>{{$user->user_code}}</u></h5>
+                                <h5 class="section-title">Your transaction ID is <u style="color: tomato">{{$user->user_code}}</u></h5>
                                 <p>
                                     Enter this code as your reference whenever you make a mobile money
                                     transaction. This helps us track your transactions.
@@ -48,9 +48,15 @@
                                 <p>
                                     Your downliners are people you've registered, and the people they've
                                     registered. To increase your downliners, let people regiseter with this link: <br>
-                                    <code>
+                                    @if($user->status == 0)
+                                        <code>
+                                            Your code is unavailable because your account isn't active.
+                                        </code>
+                                    @else
+                                        <code>
                                         http://popmoneymatrix.com/signup/{{$user->ref}}
-                                    </code>
+                                        </code>
+                                    @endif
                                 </p>
                            </div>
                        </div>
