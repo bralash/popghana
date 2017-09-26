@@ -31,7 +31,7 @@ class User extends Authenticatable
 
     public function getDownliners() {
 
-        $downliners = User::where('upliner_name',$this->username)->get();
+        $downliners = User::where('upliner_name',$this->username)->where('status', '!=', 0)->get();
         // $alldownliners = collect();
         $alldownliners = $downliners;
         // $alldownliners->merge($downliners);
