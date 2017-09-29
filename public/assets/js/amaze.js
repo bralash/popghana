@@ -26,7 +26,11 @@
 
     $(document).ready(function() {
 
-
+        $('#usersTable').DataTable({
+            "order": [
+                [6, "desc"]
+            ]
+        });
         var modal = UIkit.modal("#profileModal"),
             editModal = UIkit.modal('#editModal'),
             deleteModal = UIkit.modal('#deleteModal');

@@ -10,7 +10,7 @@
 					<div class="content">
 						<h4 class="title">Registered Users</h4>
 						<div class="material-datatables">
-							<table id="datatables" class="table table-striped table-no-bordered table-hover" style="width: 100%; cellspacing: 0">
+							<table id="usersTable" class="table table-striped table-no-bordered table-hover" style="width: 100%; cellspacing: 0">
 								<thead>
 									<tr>
 										<td>Fullname</td>

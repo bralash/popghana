@@ -12,10 +12,11 @@ class AdminController extends Controller
     public function dashboard() {
     	$user = Auth::user();
     	$users = User::all();
+        $activeUsers = User::where('status', '!=', 0)->get();
         if($user->status != 3) {
     		return redirect('/profile');
     	}
-    	return View('admin.index', compact('users'));
+    	return View('admin.index', compact('users', 'activeUsers'));
     }
 
     public function checkUplinerCount($username) {
