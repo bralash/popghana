@@ -19,7 +19,7 @@
 				<div class="uk-card uk-card-default uk-card-body usrCard" style="background: tomato;">
 					<div class="center">
 						<span class="card-icon">
-							<i class="ion-person-stalker"></i>
+							<i class="ion-android-checkmark-circle"></i>
 						</span>
 						<div class="text"><b>{{count($activeUsers)}}</b> <br> Active Users</div>
 					</div>
