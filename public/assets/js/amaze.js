@@ -37,7 +37,7 @@
 
 
 
-        $('span.profile').on('click', function() {
+        $(document.body).on('click', 'span.profile', function() {
             var data = $(this).closest('td'),
                 dataObj = {
                     name: data.attr('data-name'),
