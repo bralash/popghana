@@ -130,7 +130,7 @@ class ClientController extends Controller
     	if(Auth::attempt($userData)) {
     		return redirect('profile');
     	} else {
-    		return redirect('signin')->with('error', 'Invalide credentials. Try again');
+    		return redirect('signin')->with('error', 'Invalid credentials. Try again');
     	}
     }
 
