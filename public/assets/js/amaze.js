@@ -85,13 +85,13 @@
             modal.show();
         });
 
-        $('.editUsr').on('click', function() {
+        $(document).on('click','.editUsr', function() {
             var usrid = $(this).attr('data-usrId');
             $('#usrid').val(usrid);
             editModal.show();
         });
 
-        $('.delUsr').on('click', function() {
+        $(document).on('click','.delUsr', function() {
             var usrid = $(this).attr('data-usrId'),
                 username = $(this).attr('data-name');
             $('#usrName').text(username);
